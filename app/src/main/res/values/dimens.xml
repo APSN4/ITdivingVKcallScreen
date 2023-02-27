@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="my_value">270dp</dimen>
+    <dimen name="my_value2">170dp</dimen>
+    <dimen name="avatar_small">80dp</dimen>
+    <dimen name="up_10dp">10dp</dimen>
+</resources>

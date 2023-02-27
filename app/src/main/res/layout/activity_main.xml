@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#19191A"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/HeaderImageArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="ArrowInHeader"
+                android:scaleX="0.8"
+                android:scaleY="0.75"
+                android:src="@drawable/expand_more_fill0_wght400_grad0_opsz48"
+                app:tint="#BEFFFFFF"
+                tools:srcCompat="@drawable/expand_more_fill0_wght400_grad0_opsz48" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/header_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ButtonMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Message"
+                android:onClick="onMessageButtonClick"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/quick_phrases_fill0_wght400_grad0_opsz48"
+                app:tint="#FFFFFF"
+                tools:srcCompat="@drawable/quick_phrases_fill0_wght400_grad0_opsz48" />
+
+            <ImageButton
+                android:id="@+id/ContactsList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="100dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="ContactList"
+                android:onClick="onPeopleButtonClick"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/group_fill0_wght400_grad0_opsz48"
+                app:tint="#FFFFFF"
+                tools:srcCompat="@drawable/group_fill0_wght400_grad0_opsz48" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:backgroundTintMode="src_in"
+                android:contentDescription="Callers"
+                android:onClick="onTileButtonClick"
+                android:rotation="90"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:src="@drawable/auto_awesome_mosaic"
+                app:tint="#FFFFFF"
+                tools:srcCompat="@drawable/auto_awesome_mosaic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_tiles"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tileUserOne"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/conversation_participant_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="1dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_background_secondmy"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/textViewYou"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="6dp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:text="You"
+                                    android:textColor="#F2F2F2"
+                                    android:textSize="19sp" />
+
+                                <ImageView
+                                    android:id="@+id/imageViewMicMe"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/mic_off_fill1_wght700_grad0_opsz48"
+                                    android:backgroundTint="#F0F0F0"
+                                    android:scaleX="0.5"
+                                    android:scaleY="0.5"
+                                    app:tint="#F1F1F1" />
+                            </TableRow>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Layout_firstCaller"
+                        android:layout_width="match_parent"
+                        android:layout_height="270dp"
+                        android:gravity="center"
+
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/Avatar_1"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                app:cardCornerRadius="50dp">
+
+                                <ImageView
+                                    android:id="@+id/imageMe"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/_6733_2"
+                                    tools:srcCompat="@drawable/_6733_2" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/block_empty"
+                android:layout_width="match_parent"
+                android:layout_height="4dp">
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/tileUserTwo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/conversation_participant_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="1dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/Layout_SecondCaller"
+                        android:layout_width="match_parent"
+                        android:layout_height="270dp"
+                        android:background="@drawable/gradient_background_first"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/Avatar_2"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                app:cardCornerRadius="50dp">
+
+                                <ImageView
+                                    android:id="@+id/imageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/green_avatarka_"
+                                    tools:srcCompat="@drawable/green_avatarka_" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/textView2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="6dp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:text="I love VK and participate in events thank you for your work"
+                                    android:textColor="#F2F2F2"
+                                    android:textSize="19sp" />
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:scaleX="0.5"
+                                    android:scaleY="0.5"
+                                    app:srcCompat="@drawable/mic_off_fill1_wght700_grad0_opsz48"
+                                    app:tint="#F1F1F1" />
+                            </TableRow>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rotation="44"
+            app:srcCompat="@drawable/pen_size_2_fill1_wght700_grad0_opsz48"
+            app:tint="#CDF0F0F0" />
+
+        <LinearLayout
+            android:id="@+id/buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imageButtonCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="ButtonCamera"
+                    android:onClick="onCameraButtonClick"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    app:srcCompat="@drawable/circle_fill1_wght700_grad0_opsz48"
+                    app:tint="#FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/imageViewCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="9dp"
+                    android:background="@drawable/videocam_off_fill1_wght700_grad0_opsz48"
+                    android:backgroundTint="#000000"
+                    android:scaleX="0.45"
+                    android:scaleY="0.45" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imageButtonMicrophone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="BuutonMic"
+                    android:onClick="onMicButtonClick"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    app:srcCompat="@drawable/circle_fill1_wght700_grad0_opsz48"
+                    app:tint="#FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/imageViewMicrophone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="9dp"
+                    android:background="@drawable/mic_off_fill1_wght700_grad0_opsz48"
+                    android:scaleX="0.45"
+                    android:scaleY="0.45" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imageButtonHand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="HandButton"
+                    android:onClick="onHandButtonClick"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    app:srcCompat="@drawable/circle_fill1_wght700_grad0_opsz48"
+                    app:tint="#363738" />
+
+                <ImageView
+                    android:id="@+id/imageViewHand"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rotation="-25"
+                    android:scaleX="0.45"
+                    android:scaleY="0.45"
+                    app:srcCompat="@drawable/front_hand_fill1_wght700_grad0_opsz48"
+                    app:tint="#FEFEFE" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.3"
+                    android:scaleY="0.3"
+                    android:translationX="31dp"
+                    android:translationY="19dp"
+                    app:srcCompat="@drawable/favorite_fill0_wght700_grad0_opsz48"
+                    app:tint="#363738" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imageButtonCancelCall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="CancelCall"
+                    android:onClick="onCancelButtonClick"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    app:srcCompat="@drawable/circle_fill1_wght700_grad0_opsz48"
+                    app:tint="#E54646" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rotation="136"
+                    android:scaleX="0.45"
+                    android:scaleY="0.45"
+                    app:srcCompat="@drawable/call_fill1_wght700_grad0_opsz48"
+                    app:tint="#FEFEFE" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
